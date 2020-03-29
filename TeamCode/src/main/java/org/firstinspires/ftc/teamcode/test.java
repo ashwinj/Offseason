@@ -19,5 +19,6 @@ public class test extends Auto_Methods {
 
         //initializing robot
         initRobot();
+        forward(1, 5);
     }
 }
