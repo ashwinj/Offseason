@@ -46,7 +46,7 @@ public class Hardware {
     }
 
 
-    public void initTeleOpNOIMU(HardwareMap hwMap) {
+    public void initTeleOpIMU(HardwareMap hwMap) {
 
         // Save reference to Hardware map
         this.hwMap = hwMap;
@@ -61,14 +61,10 @@ public class Hardware {
         leftIntake = hwMap.dcMotor.get("left_intake");
         intake3 = hwMap.crservo.get("intake_help_right");
         intake2 = hwMap.crservo.get("intake_help_left");
-        blockSensor = hwMap.get(DistanceSensor.class, "left_block_sensor");
+        //blockSensor = hwMap.get(DistanceSensor.class, "left_block_sensor");
 
 
         // Initialize Motors
-        frontLeftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        frontRightMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        backLeftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        backRightMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
         // ******MAY CHANGE *******  Fix Forward/Reverse under testing
         frontLeftMotor.setDirection(DcMotor.Direction.FORWARD);
@@ -78,13 +74,6 @@ public class Hardware {
         leftIntake.setDirection(DcMotorSimple.Direction.REVERSE);
         rightIntake.setDirection(DcMotorSimple.Direction.FORWARD);
         intake3.setDirection(DcMotorSimple.Direction.REVERSE);
-
-        frontLeftMotor.setPower(0);
-        frontRightMotor.setPower(0);
-        backLeftMotor.setPower(0);
-        backRightMotor.setPower(0);
-        leftIntake.setPower(0);
-        rightIntake.setPower(0);
 
         // May use RUN_USING_ENCODERS if encoders are installed
         frontLeftMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
@@ -96,6 +85,19 @@ public class Hardware {
         frontRightMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         backLeftMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         backRightMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
+
+        frontLeftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        frontRightMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        backLeftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        backRightMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+
+        frontLeftMotor.setPower(0);
+        frontRightMotor.setPower(0);
+        backLeftMotor.setPower(0);
+        backRightMotor.setPower(0);
+        leftIntake.setPower(0);
+        rightIntake.setPower(0);
 
         // Define Servos
         leftLiftMotor = hwMap.dcMotor.get("left_lift");

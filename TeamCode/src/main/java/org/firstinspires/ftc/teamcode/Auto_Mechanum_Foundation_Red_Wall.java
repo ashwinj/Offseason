@@ -3,13 +3,14 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 
 
 /**
  * created by ashwin jandhyala
  * 10/6/2019
  */
-//@Disabled
+@Disabled
 @Autonomous(name = "Foundation_Red_Wall", group = "Tau")
 
 public class Auto_Mechanum_Foundation_Red_Wall extends Auto_Methods {
@@ -28,7 +29,7 @@ public class Auto_Mechanum_Foundation_Red_Wall extends Auto_Methods {
         backward(.5, 35);
         liftDrop();
         forward(.5, 27);
-        right(90);
+        right(.1, 90);
         liftUp(.5,1000);
         strafeLeft(.5,10);
         forward(.5,15);

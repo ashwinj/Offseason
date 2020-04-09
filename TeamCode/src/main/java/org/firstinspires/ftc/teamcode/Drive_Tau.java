@@ -76,8 +76,8 @@ public class Drive_Tau extends LinearOpMode {
         clawServo = hardwareMap.servo.get("claw_servo");
         //leftLiftLimit = hardwareMap.get(DigitalChannel.class, "left_lift_limit0");
         rightLiftLimit = hardwareMap.get(DigitalChannel.class, "right_lift_limit0");
-        blockSensor = hardwareMap.get(DistanceSensor.class, "left_block_sensor");
-        liftSensor = hardwareMap.get(DistanceSensor.class, "lift_height_sensor");
+        //blockSensor = hardwareMap.get(DistanceSensor.class, "left_block_sensor");
+        //liftSensor = hardwareMap.get(DistanceSensor.class, "lift_height_sensor");
 
         //leftExtensionLimit = hardwareMap.get(TouchSensor.class, "leftExtensionLimit");
         rightExtensionLimit = hardwareMap.get(DigitalChannel.class, "right_extension_limit0");

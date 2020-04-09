@@ -10,17 +10,16 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
  * 10/6/2019
  */
 //@Disabled
-@Autonomous(name = "test", group = "Tau")
+@Autonomous(name = "test2", group = "Tau")
 
-public class test extends Auto_Methods {
+public class test2 extends Auto_Methods {
 
     @Override
     public void runOpMode() throws InterruptedException {
 
         //initializing robot
         initRobot();
-        right(.2, 180);
+        forward(1, 72);
         sleep(10000);
     }
 }
-//990
